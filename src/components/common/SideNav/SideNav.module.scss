@@ -1,0 +1,53 @@
+.nav {
+  background-color: #1d1b31;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 2px 7px;
+  position: fixed;
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+  padding: 10px 0;
+  box-sizing: border-box;
+  transition: width 0.2s;
+  overflow: hidden;
+
+  &:global(.active) {
+    width: 200px;
+
+    .list .backdrop {
+      width: 190px;
+    }
+  }
+
+  .top {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+
+    .title {
+      position: absolute;
+      align-items: center;
+      left: 50px;
+      width: 150px;
+      color: #fff;
+    }
+  }
+
+  .list {
+    position: relative;
+
+    .backdrop {
+      transition: all 0.2s;
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+      z-index: -1;
+    }
+  }
+}

@@ -1,5 +1,7 @@
+import { AnimatedPage } from 'components';
+
 const Project = () => {
-  return <div>Project</div>;
+  return <AnimatedPage>Project</AnimatedPage>;
 };
 
 export default Project;

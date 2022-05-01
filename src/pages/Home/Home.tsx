@@ -1,5 +1,7 @@
+import { AnimatedPage } from 'components';
+
 const Home = () => {
-  return <div>Home</div>;
+  return <AnimatedPage>Home</AnimatedPage>;
 };
 
 export default Home;

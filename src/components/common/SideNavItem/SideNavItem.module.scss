@@ -1,0 +1,30 @@
+.item {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s;
+
+  &:global(.active) {
+    color: #1d1b31;
+  }
+
+  .icon {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    position: absolute;
+    align-items: center;
+    left: 50px;
+    width: 150px;
+  }
+}
