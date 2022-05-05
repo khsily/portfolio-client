@@ -19,6 +19,7 @@
     "react-query": "^3.38.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-typing-effect": "^2.0.5",
     "sass": "^1.51.0",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-typing-effect": "^2.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.2"

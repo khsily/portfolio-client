@@ -1,7 +1,31 @@
-import { AnimatedPage } from 'components';
+import { AnimatedPage, ProjectSlider } from 'components';
+import { useCallback, useState } from 'react';
+import { projectData } from 'shared/utils/dummy';
 
 const Project = () => {
-  return <AnimatedPage>Project</AnimatedPage>;
+  const [slideIndex, setSlideIndex] = useState(2);
+  const [active, setActive] = useState(false);
+
+  const handleSelect = useCallback(() => {
+    setActive(true);
+  }, []);
+
+  const handleDeselect = useCallback(() => {
+    setActive(false);
+  }, []);
+
+  return (
+    <AnimatedPage>
+      <ProjectSlider
+        data={projectData}
+        currentIndex={slideIndex}
+        selected={active}
+        onChange={setSlideIndex}
+        onSelect={handleSelect}
+        onDeselect={handleDeselect}
+      />
+    </AnimatedPage>
+  );
 };
 
 export default Project;

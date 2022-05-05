@@ -1,0 +1,38 @@
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-position: bottom;
+  background-size: cover;
+  perspective: 500px;
+}
+
+.reflection {
+  background-image: inherit;
+  width: inherit;
+  height: 40%;
+  position: absolute;
+  bottom: -40%;
+  background-position: bottom;
+  background-size: cover;
+  opacity: 0.8;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  overflow: hidden;
+
+  .reflect_image {
+    background-image: inherit;
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(-1);
+  }
+
+  .shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
