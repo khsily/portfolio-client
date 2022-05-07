@@ -16,22 +16,6 @@
       transform: rotateY(60deg) scale(0.8) translateZ(200px);
       cursor: pointer;
 
-      .title {
-        transition: all 0.2s;
-        position: absolute;
-        width: 100%;
-        top: -38px;
-        padding: 10px;
-        box-sizing: border-box;
-        z-index: 10;
-        font-weight: normal;
-        font-size: 15px;
-        color: #232323;
-        background-color: #1d1b31;
-        color: #fff;
-        opacity: 0;
-      }
-
       .overlay {
         transition: all 0.2s;
         position: absolute;
@@ -58,10 +42,6 @@
         .overlay {
           opacity: 0.2;
         }
-
-        .title {
-          opacity: 1;
-        }
       }
     }
   }
@@ -76,11 +56,6 @@
 
           &:active {
             transform: scale(2);
-          }
-
-          .title {
-            transition: none;
-            opacity: 0;
           }
 
           .overlay {

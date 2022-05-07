@@ -41,7 +41,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
             style={{ zIndex: 100 - Math.abs(currentIndex - i), width: size.width, height: size.height }}
             onClick={() => handleClick(i)}
           >
-            <h1 className={styles.title}>{slide.title}</h1>
             <ReflectImage image={slide.thumbnail} hideReflection={currentIndex === i && selected} />
             <div className={styles.overlay}></div>
           </div>
