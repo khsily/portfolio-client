@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px #555;
+  margin-bottom: 20px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .child_div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #aaa;
+    transition: all 1s;
+    background-color: #fff;
+    background-size: 70%;
+  }
+}

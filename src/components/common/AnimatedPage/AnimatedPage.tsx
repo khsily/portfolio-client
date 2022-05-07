@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from './AnimatedPage.module.scss';
 
@@ -29,7 +29,9 @@ const variants = {
 const AnimatedPage: React.FC<React.HTMLProps<HTMLDivElement>> = ({ children }) => {
   return (
     <motion.div variants={variants} initial='pageInitial' animate='pageIn' exit='pageOut'>
-      <div className={styles.page}>{children}</div>
+      <AnimatePresence initial>
+        <div className={styles.page}>{children}</div>
+      </AnimatePresence>
     </motion.div>
   );
 };

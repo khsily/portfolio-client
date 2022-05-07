@@ -1,0 +1,22 @@
+.title {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  h2 {
+    color: #222;
+  }
+
+  h1 {
+    color: #222;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px 0;
+  }
+
+  span {
+    font-size: 18px;
+    color: #999;
+  }
+}
