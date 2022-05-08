@@ -1,0 +1,18 @@
+.hint {
+  width: 300px;
+  padding: 12px;
+  box-shadow: 3px 3px 3px #ccc;
+  border-radius: 8px;
+
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    .percentage {
+      font-size: 15px;
+      font-weight: normal;
+    }
+  }
+}

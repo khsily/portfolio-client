@@ -1,4 +1,5 @@
-import { AnimatedPage, HomeTitle, CircularDiv } from 'components';
+import { AnimatedPage, HomeTitle, CircularDiv, SkillHint } from 'components';
+import { useCallback, useState } from 'react';
 
 import {
   userIcon,
@@ -14,22 +15,53 @@ import {
   ic_sass,
 } from 'static/images';
 
+const skills = [
+  { name: 'html', level: 90 },
+  { name: 'css', level: 85 },
+  { name: 'sass', level: 75 },
+  { name: 'javascript', level: 90 },
+  { name: 'typescript', level: 80 },
+  { name: 'react', level: 90 },
+  { name: 'nodejs', level: 80 },
+  { name: 'python', level: 85 },
+  { name: 'android', level: 70 },
+  { name: 'ios', level: 65 },
+];
+
 const Home = () => {
+  const [hintPos, setHintPos] = useState({ top: 0, left: 0 });
+  const [hintVisible, setHintVisible] = useState(false);
+  const [skill, setSkill] = useState(skills[0]);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const name = e.currentTarget.getAttribute('name');
+    const skill = skills.find((skill) => skill.name === name);
+
+    setSkill(skill!);
+    setHintPos({ top: e.clientY, left: e.clientX });
+    setHintVisible(true);
+  }, []);
+
+  const handleMouseOut = useCallback(() => {
+    setHintVisible(false);
+  }, []);
+
   return (
     <AnimatedPage>
       <HomeTitle name='hansu kim' desc='frontend web developer' />
       <CircularDiv image={userIcon}>
-        <CircularDiv image={ic_html} />
-        <CircularDiv image={ic_css} />
-        <CircularDiv image={ic_sass} />
-        <CircularDiv image={ic_js} />
-        <CircularDiv image={ic_ts} />
-        <CircularDiv image={ic_react} />
-        <CircularDiv image={ic_node} />
-        <CircularDiv image={ic_python} />
-        <CircularDiv image={ic_android} />
-        <CircularDiv image={ic_ios} />
+        <CircularDiv name='html' image={ic_html} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='css' image={ic_css} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='sass' image={ic_sass} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='javascript' image={ic_js} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='typescript' image={ic_ts} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='react' image={ic_react} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='nodejs' image={ic_node} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='python' image={ic_python} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='android' image={ic_android} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
+        <CircularDiv name='ios' image={ic_ios} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut} />
       </CircularDiv>
+      <SkillHint visible={hintVisible} position={hintPos} name={skill.name} level={skill.level} />
     </AnimatedPage>
   );
 };

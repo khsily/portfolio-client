@@ -1,0 +1,12 @@
+.progressbar {
+  padding: 3px;
+  background-color: #ddd;
+  border-radius: 5px;
+
+  .inner {
+    width: 0%;
+    height: 10px;
+    border-radius: inherit;
+    transition: all 0.5s;
+  }
+}

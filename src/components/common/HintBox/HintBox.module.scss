@@ -1,0 +1,14 @@
+.hintbox {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 1;
+
+  &:global(.visible) {
+    z-index: 3;
+    opacity: 1;
+    user-select: none;
+    pointer-events: none;
+  }
+}
