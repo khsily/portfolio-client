@@ -1,0 +1,13 @@
+.skill {
+  margin-bottom: 15px;
+
+  .name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .progress {
+    transition: all 2s;
+  }
+}

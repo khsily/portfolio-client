@@ -26,11 +26,13 @@ const variants = {
   },
 };
 
-const AnimatedPage: React.FC<React.HTMLProps<HTMLDivElement>> = ({ children }) => {
+const AnimatedPage: React.FC<React.HTMLProps<HTMLDivElement>> = ({ children, ...props }) => {
   return (
     <motion.div variants={variants} initial='pageInitial' animate='pageIn' exit='pageOut'>
       <AnimatePresence initial>
-        <div className={styles.page}>{children}</div>
+        <div className={styles.page} {...props}>
+          {children}
+        </div>
       </AnimatePresence>
     </motion.div>
   );

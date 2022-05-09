@@ -15,3 +15,10 @@ export { default as SkillHint } from './home/SkillHint/SkillHint';
 
 // project
 export { default as ProjectSlider } from './project/ProjectSlider/ProjectSlider';
+
+// about
+export { default as AboutPane } from './about/AboutPane/AboutPane';
+export { default as AboutInfo } from './about/AboutInfo/AboutInfo';
+export { default as AboutSkill } from './about/AboutSkill/AboutSkill';
+export { default as AboutSkills } from './about/AboutSkills/AboutSkills';
+export { default as AboutWorkBox } from './about/AboutWorkBox/AboutWorkBox';

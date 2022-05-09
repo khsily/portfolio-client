@@ -4,10 +4,12 @@
 
   margin-left: 50px;
   width: calc(100vw - 50px);
+  min-width: 1000px;
   height: 100vh;
 
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
