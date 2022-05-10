@@ -7,6 +7,7 @@ export { default as AnimatedPage } from './common/AnimatedPage/AnimatedPage';
 export { default as ReflectImage } from './common/ReflectImage/ReflectImage';
 export { default as HintBox } from './common/HintBox/HintBox';
 export { default as ProgressBar } from './common/ProgressBar/ProgressBar';
+export { default as FadeIn } from './common/FadeIn/FadeIn';
 
 // home
 export { default as HomeTitle } from './home/HomeTitle/HomeTitle';

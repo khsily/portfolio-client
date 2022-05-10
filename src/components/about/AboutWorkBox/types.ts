@@ -1,1 +1,4 @@
-export interface AboutWorkBoxProps {}
+export interface AboutWorkBoxProps {
+  title?: string;
+  desc?: string;
+}

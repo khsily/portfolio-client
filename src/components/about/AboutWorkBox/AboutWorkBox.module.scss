@@ -1,0 +1,27 @@
+.workbox {
+  flex: 1;
+  min-height: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  margin-right: 20px;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 5px #bbb;
+  padding: 20px;
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .desc {
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #888;
+  }
+}
