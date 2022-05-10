@@ -29,7 +29,7 @@ const skills = [
 ];
 
 const Home = () => {
-  const [hintPos, setHintPos] = useState({ top: 0, left: 0 });
+  const [hintPos, setHintPos] = useState({ top: window.innerHeight / 2, left: window.innerWidth / 2 });
   const [hintVisible, setHintVisible] = useState(false);
   const [skill, setSkill] = useState(skills[0]);
 
