@@ -1,0 +1,16 @@
+.tech {
+  .row {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #aaa;
+    font-size: 13px;
+
+    .key {
+      flex: 1;
+    }
+
+    .value {
+      flex: 1;
+    }
+  }
+}

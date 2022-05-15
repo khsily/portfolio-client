@@ -16,6 +16,10 @@ export { default as SkillHint } from './home/SkillHint/SkillHint';
 
 // project
 export { default as ProjectSlider } from './project/ProjectSlider/ProjectSlider';
+export { default as ProjectDetail } from './project/ProjectDetail/ProjectDetail';
+export { default as ProjectInfo } from './project/ProjectInfo/ProjectInfo';
+export { default as ProjectTech } from './project/ProjectTech/ProjectTech';
+export { default as ImageSlideViewer } from './project/ImageSlideViewer/ImageSlideViewer';
 
 // about
 export { default as AboutPane } from './about/AboutPane/AboutPane';

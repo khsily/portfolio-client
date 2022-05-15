@@ -1,9 +1,9 @@
 import { AnimatedPage, ProjectSlider } from 'components';
 import { useCallback, useState } from 'react';
-import { projectData } from 'shared/utils/dummy';
+import { smapleData } from 'shared/utils/dummy';
 
 const Project = () => {
-  const [slideIndex, setSlideIndex] = useState(2);
+  const [slideIndex, setSlideIndex] = useState(Math.floor(smapleData.length / 2));
   const [active, setActive] = useState(false);
 
   const handleSelect = useCallback(() => {
@@ -17,7 +17,7 @@ const Project = () => {
   return (
     <AnimatedPage>
       <ProjectSlider
-        data={projectData}
+        data={smapleData}
         currentIndex={slideIndex}
         selected={active}
         onChange={setSlideIndex}

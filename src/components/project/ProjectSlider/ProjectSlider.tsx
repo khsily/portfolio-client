@@ -4,6 +4,7 @@ import { ReflectImage } from 'components';
 
 import { ProjectSliderProps } from './types';
 import styles from './ProjectSlider.module.scss';
+import ProjectDetail from '../ProjectDetail/ProjectDetail';
 
 const ProjectSlider: React.FC<ProjectSliderProps> = ({
   data = [],
@@ -17,7 +18,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
   const slidePositionStyle = useMemo(
     () => ({
       transform: `translateX(calc(50vw - 30px - ${size.width / 2}px - ${size.width * currentIndex}px))`,
-      perspectiveOrigin: `${size.width / 2 + size.width * currentIndex}px`,
     }),
     [currentIndex, size],
   );
@@ -43,6 +43,9 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
           >
             <ReflectImage image={slide.thumbnail} hideReflection={currentIndex === i && selected} />
             <div className={styles.overlay}></div>
+            <div className={styles.scaled_content}>
+              <ProjectDetail data={slide} visible={selected && currentIndex === i} />
+            </div>
           </div>
         ))}
       </div>
