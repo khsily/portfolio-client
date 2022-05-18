@@ -22,13 +22,17 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
     [currentIndex, size],
   );
 
-  const handleClick = (index: number) => {
+  const handleSlideClick = (index: number) => {
     if (index === currentIndex) {
-      onSelect?.();
+      if (!selected) onSelect?.();
     } else {
       onChange?.(index);
       onDeselect?.();
     }
+  };
+
+  const handleSlideClose = () => {
+    onDeselect?.();
   };
 
   return (
@@ -39,12 +43,12 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
             key={`slide_${slide.id}`}
             className={`${styles.slide} ${currentIndex === i ? 'active' : ''}`}
             style={{ zIndex: 100 - Math.abs(currentIndex - i), width: size.width, height: size.height }}
-            onClick={() => handleClick(i)}
+            onClick={() => handleSlideClick(i)}
           >
             <ReflectImage image={slide.thumbnail} hideReflection={currentIndex === i && selected} />
             <div className={styles.overlay}></div>
             <div className={styles.scaled_content}>
-              <ProjectDetail data={slide} visible={selected && currentIndex === i} />
+              <ProjectDetail data={slide} visible={selected && currentIndex === i} onClose={handleSlideClose} />
             </div>
           </div>
         ))}

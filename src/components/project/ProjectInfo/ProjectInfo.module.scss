@@ -3,12 +3,14 @@
 
   .title {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
   }
 
   .content {
-    font-size: 13px;
-    color: #ddd;
-    line-height: 1.3em;
+    font-size: 12px;
+    line-height: 1.8em;
+    border-left: 3px solid #fff;
+    padding-left: 10px;
   }
 }

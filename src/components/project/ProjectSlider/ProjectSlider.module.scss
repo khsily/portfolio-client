@@ -61,21 +61,19 @@ $scale: 1.4;
   }
 
   &:global(.selected) {
-    .inner {
-      .slide {
-        &:global(.active) {
-          cursor: auto;
+    .slide {
+      &:global(.active) {
+        cursor: auto;
+        transform: scale(2);
+        position: relative;
+        z-index: 10;
+
+        &:active {
           transform: scale(2);
-          position: relative;
-          z-index: 10;
+        }
 
-          &:active {
-            transform: scale(2);
-          }
-
-          .overlay {
-            opacity: 0.7;
-          }
+        .overlay {
+          opacity: 0.7;
         }
       }
     }
