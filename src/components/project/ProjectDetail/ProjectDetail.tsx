@@ -1,10 +1,13 @@
-import { FadeIn, ProjectInfo, ProjectTech, ImageSlideViewer } from 'components';
 import { useCallback, useState } from 'react';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { FadeIn, ProjectInfo, ProjectTech, ImageSlideViewer } from 'components';
 
 import styles from './ProjectDetail.module.scss';
 import { ProjectDetailProps } from './types';
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, visible = false }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, visible = false, onClose }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const handleImageChange = useCallback((index: number) => {
@@ -20,7 +23,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, visible = false }) 
           <h1 className={styles.title}>
             <span>{data?.title}</span>
           </h1>
-          <div className={styles.close}></div>
+          <FontAwesomeIcon className={styles.close} icon={faClose} onClick={onClose} />
         </div>
       </FadeIn>
       <div className={styles.content}>
